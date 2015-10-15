@@ -1,0 +1,270 @@
+{extends file="../index.html"}
+{block name=article}{strip}
+   
+<div class="header_modules">
+    <div class="container">
+
+
+
+    <script>
+  
+        
+        $(document).ready(function () {
+            var o = $('#tm_product_slideshow'); 
+            o.owlCarousel({
+                items : 1,
+                singleItem: true,
+                slideSpeed: 2000,
+                autoPlay : false,
+                stopOnHover : true,
+                pagination: true,
+                navigation : false,
+                navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+            });
+            });
+   
+</script> 
+        <div id="tm_product_slideshow" class="tm_product_slideshow">
+         {foreach from=$VITRINA_BLOCKS item=item key=key name=showcase}
+             <div class="slideshow-product">
+            <div class="caption">
+                <div class="name">
+                    <a href="{$item.href}}">{$item.product_name|escape}</a>
+                </div>
+                
+                                    <div class="price">
+                                                      {if (float)$item.price_native}{$item.price_native} {$props->get('finance.native_currency_txt_code')}{elseif (float)$item.price_foreign}{$item.price_foreign} {$scurrency}{/if}                                                                 </div>
+                                <div class="cart-button">
+                    
+                </div>
+            </div>
+            <div class="image" style="width: 460px">
+                <a class="lazy"
+                   style="padding-bottom: 102.60869565217%"
+                   href="{$item.href}">
+                    <img alt="{$item.product_name|escape}"
+                         title="{$item.product_name|escape}"
+                         class="img-responsive"
+                         data-src="{$item.img_src|replace:'dev5':'biz'}"
+                         src="{$item.img_src|replace:'dev5':'biz'}"/>
+                </a>
+            </div>
+        </div>
+         {/foreach}
+
+       
+        </div>
+
+
+    </div>
+
+    <div class="section-bg">
+<div class="container">
+<div class="banners row" id="banner0">
+            <div class="col-sm-4 banner-1 wow fadeInLeft" >
+        <div class="banner-box">
+            <a href="/zagrazhdenie-armirovannoe-kolyuche-lentochnoe-gg1059905" class="clearfix">
+                <img class="img-responsive" alt="banner-1" src="/templates/furniture-color_scheme-5/image/banner-1-370x276.jpg">
+                                <div class="s-desc"><h2>Sofas</h2>
+<span class="fa-search"></span></div>
+                            </a>
+        </div>
+    </div>
+                <div class="col-sm-4 banner-2 wow fadeInDown" data-wow-delay="1s">
+        <div class="banner-box">
+            <a href="/zagrazhdenie-armirovannoe-kolyuche-lentochnoe-gg1059905" class="clearfix">
+                <img class="img-responsive" alt="banner-2" src="/templates/furniture-color_scheme-5/image/banner-2-370x276.jpg">
+                                <div class="s-desc"><h2>Chairs</h2>
+<span class="fa-search"></span></div>
+                            </a>
+        </div>
+    </div>
+                <div class="col-sm-4 banner-3 wow fadeInRight" data-wow-delay="1.5s">
+        <div class="banner-box">
+            <a href="/zagrazhdenie-armirovannoe-kolyuche-lentochnoe-gg1059905" class="clearfix">
+                <img class="img-responsive" alt="banner-3" src="/templates/furniture-color_scheme-5/image/banner-3-370x276.jpg">
+                                <div class="s-desc"><h2>Tables</h2>
+<span class="fa-search"></span></div>
+                            </a>
+        </div>
+    </div>
+                <div class="col-sm-4 banner-4 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="banner-box">
+            <a href="/zagrazhdenie-armirovannoe-kolyuche-lentochnoe-gg1059905" class="clearfix">
+                <img class="img-responsive" alt="banner-4" src="/templates/furniture-color_scheme-5/image/banner-4-370x276.jpg">
+                                <div class="s-desc"><h2>Beds</h2>
+<span class="fa-search"></span></div>
+                            </a>
+        </div>
+    </div>
+                <div class="col-sm-4 banner-5 wow fadeInUp" data-wow-delay="2s">
+        <div class="banner-box">
+            <a href="/zagrazhdenie-armirovannoe-kolyuche-lentochnoe-gg1059905" class="clearfix">
+                <img class="img-responsive" alt="banner-5" src="/templates/furniture-color_scheme-5/image/banner-5-370x276.jpg">
+                                <div class="s-desc"><h2>Storages</h2>
+<span class="fa-search"></span></div>
+                            </a>
+        </div>
+    </div>
+                <div class="col-sm-4 banner-6 wow fadeInUp" data-wow-delay="2.5s">
+        <div class="banner-box">
+            <a href="/zagrazhdenie-armirovannoe-kolyuche-lentochnoe-gg1059905" class="clearfix">
+                <img class="img-responsive" alt="banner-6" src="/templates/furniture-color_scheme-5/image/banner-6-370x276.jpg">
+                                <div class="s-desc"><h2>Bookcases</h2>
+<span class="fa-search"></span></div>
+                            </a>
+        </div>
+    </div>
+        </div>
+</div>
+</div>
+</div>
+{if $BLOCK_NEWS}
+<div id="container">
+    <div class="container">
+        <div class="row">                               <div id="content" class="col-sm-12"><div id="parallax_0" class="parallax first_par" >
+  
+            <div   data-source-url="/templates/furniture-color_scheme-5/image/parallax-1-2050x1166.jpg" class="parallax-1 ">
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h1>
+{$BLOCK_NEWS[0].title|escape:"htmlall"}
+</span>
+</h1>
+<h3>
+{$BLOCK_NEWS[0].title|escape:"htmlall"} : {$BLOCK_NEWS[0].body|escape:"htmlall"}
+</h3>
+</div>
+<div class="col-sm-3">
+<a class="fa  fa-search" href="{$BLOCK_NEWS[0].href}"></a>
+</div>               </div>
+            </div>
+            </div>
+        </div>
+
+    
+      
+</div>
+
+<script>
+    jQuery(document).ready(function() {
+    jQuery("#parallax_0>div").cherryFixedParallax({
+        invert: false,
+        });    
+    }); 
+</script>
+{/if}
+<div class="box featured">
+<div class="box-heading">
+<h3>Продукты и услуги</h3>
+</div>
+<div class="box-content">
+<div class="row">
+ {foreach from=$GOODS_BLOCKS item=item}
+ <div class="product-layout col-lg-3 col-md-3 col-sm-3 col-xs-12 maxheight">
+ <div class="product-thumb transition">
+ <div class="image">
+ <a href="{$item.href}"  class="">
+                <img src="{$item.img_src}" class="img-responsive" title="{$item.product_name}" alt="{$item.product_name}">
+                </a>
+ </div>
+
+ <div class="caption">
+ <div class="price"> {$item.price_native} 
+ <span class="currency-new"> {$item.currency}   </div>
+ <div class="name">
+<a href="{$item.href}">{$item.product_name}</a>
+</div>
+
+<div class="description">
+
+{$item.description}</div>
+<div class="cart-button">
+<a {if !$IS_SHOP_CART_ACTIVE}href="javascript: //"{/if} class="button product-btn-add addToCart {if !$IS_SHOP_CART_ACTIVE OR $TYPE <> 'goods'}b-button_type_order{/if}" id="{$item.id}" title="Add to cart" onClick="ga('send', 'event', 'CPA', 'order', 'order_button'); {if $IS_SHOP_CART_ACTIVE AND $TYPE eq 'goods'
+              }addtocart({$item.id}, '{$smarty.const.COUNTRY_CODE}', 1);
+              return false;{/if}">
+                                <i class="fa fa-shopping-cart"></i>Заказать
+ </a> 
+</div>
+ </div>
+ </div>
+ </div>
+ {/foreach} 
+
+
+  {foreach from=$SERVICES_BLOCKS item=item}
+ <div class="product-layout col-lg-3 col-md-3 col-sm-3 col-xs-12 maxheight">
+ <div class="product-thumb transition">
+ <div class="image">
+ <a href="{$item.href}"  class="">
+                <img src="{$item.img_src}" class="img-responsive" title="{$item.product_name}" alt="{$item.product_name}">
+                </a>
+ </div>
+
+ <div class="caption">
+ <div class="price"> {$item.price_native} 
+ <span class="currency-new"> {$item.currency}   </div>
+ <div class="name">
+<a href="{$item.href}">{$item.product_name}</a>
+</div>
+
+<div class="description">
+
+{$item.description}</div>
+<div class="cart-button">
+<a {if !$IS_SHOP_CART_ACTIVE}href="javascript: //"{/if} class="button product-btn-add addToCart {if !$IS_SHOP_CART_ACTIVE OR $TYPE <> 'goods'}b-button_type_order{/if}" id="{$item.id}" title="Add to cart" onClick="ga('send', 'event', 'CPA', 'order', 'order_button'); {if $IS_SHOP_CART_ACTIVE AND $TYPE eq 'goods'
+              }addtocart({$item.id}, '{$smarty.const.COUNTRY_CODE}', 1);
+              return false;{/if}">
+                                <i class="fa fa-shopping-cart"></i>
+ </a> 
+</div>
+ </div>
+ </div>
+ </div>
+ {/foreach} 
+</div>
+</div>
+</div>
+
+
+{if $BLOCK_NEWS}
+
+    <div class="container">
+        <div class="row">                               <div id="content" class="col-sm-12"><div id="parallax_0" class="parallax" >
+  
+            <div   data-source-url="/templates/furniture-color_scheme-5/image/parallax-1-2050x1166.jpg" class="parallax-1 ">
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h1>
+{$BLOCK_NEWS[1].title|escape:"htmlall"}
+</span>
+</h1>
+<h3>
+{$BLOCK_NEWS[1].title|escape:"htmlall"} : {$BLOCK_NEWS[1].body|escape:"htmlall"}
+</h3>
+</div>
+<div class="col-sm-3">
+<a class="fa  fa-search" href="{$BLOCK_NEWS[1].href}"></a>
+</div>               </div>
+            </div>
+            </div>
+        </div>
+
+    
+      
+
+
+<script>
+    jQuery(document).ready(function() {
+    jQuery("#parallax_0>div").cherryFixedParallax({
+        invert: false,
+        });    
+    }); 
+</script>
+{/if}
+
+{/strip}{/block}
+
+

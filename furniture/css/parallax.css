@@ -1,0 +1,115 @@
+.parallax {
+	line-height:27px;
+	font-size:15px;
+	margin-bottom: 0;
+	color:#fff;
+}
+.parallax>div.link {
+	cursor:pointer
+}
+.parallax>div {
+	position:relative;
+	 padding: 13% 0 16.7%;
+	color:#fff;
+	background-position:top;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.parallax p {
+	position:relative;
+	display:block;
+}
+.parallax h1 {
+	margin-bottom: 0;
+	font-size: 40px;
+	line-height: 40px;
+	color: #f47952;
+	font-weight: 300;
+}
+.parallax h1 span {
+	color: #fff;
+	margin-top: -11px;
+	margin-left: 13px;
+}
+.parallax .parallax-2 h1 span {
+	margin-left: 0;
+}  
+.parallax h1 span, .parallax h3 span {
+	display: block;
+}
+.parallax h3 {
+	font-size: 14px;
+	line-height: 21px;
+	color: #b9c0cb;
+	margin-top: 12px;
+	
+	text-transform: uppercase;
+}
+.parallax a {
+	width: 198px;
+	height: 198px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 70px;
+	line-height: 198px;
+	color: #fff;
+	background: #f47952;
+	position: absolute;
+	top: 27%;
+	right: 5px;
+	transition(all .5s ease);
+}
+.parallax a:hover {
+	background: rgba(255, 255, 255, .6);
+}
+
+@media (max-width: 991px) {
+	.parallax h1 {
+		font-size: 65px;
+		line-height: 75px;
+	}
+	.parallax h1 span {
+		margin-left: 0;
+	}
+	.parallax h3 {
+		margin-top: 12px;
+		font-size: 14px;
+		margin-left: 0;
+	}
+	.parallax a {
+		width: 96px;
+		height: 96px;
+		font-size: 40px;
+		line-height: 96px;
+		top: 28.4%;
+	}
+}
+@media (max-width: 649px) {
+	.parallax h1 {
+		font-size: 55px;
+		line-height: 60px;
+	}
+	.parallax h3 {
+		margin-top: 10px;
+		font-size: 12px;
+	}
+}
+@media (max-width: 499px) {
+	.parallax h1 {
+		font-size: 45px;
+		line-height: 55px;
+	}
+	.parallax h3 {
+		margin-top: 11px;
+		font-size: 14px;
+	}
+	.parallax a {
+		width: 66px;
+		height: 66px;
+		font-size: 30px;
+		line-height: 66px;
+		left: 0;
+		right: 0;
+		position: relative;
+	}
+}
